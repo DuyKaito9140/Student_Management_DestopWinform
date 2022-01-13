@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLHocSinh", "QLHocSinh\QLHocSinh.csproj", "{CC5990FC-DFE5-4A01-ADBB-B72512170A0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC5990FC-DFE5-4A01-ADBB-B72512170A0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC5990FC-DFE5-4A01-ADBB-B72512170A0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC5990FC-DFE5-4A01-ADBB-B72512170A0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC5990FC-DFE5-4A01-ADBB-B72512170A0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A465A59-5EDC-4F35-AFC5-6EF6FB038866}
+	EndGlobalSection
+EndGlobal

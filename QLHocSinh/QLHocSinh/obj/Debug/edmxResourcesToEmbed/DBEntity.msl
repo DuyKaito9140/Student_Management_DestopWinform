@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLHSModelStoreContainer" CdmEntityContainer="DBE_QLHS">
+    <EntitySetMapping Name="Table_BangDiem">
+      <EntityTypeMapping TypeName="QLHSModel.Table_BangDiem">
+        <MappingFragment StoreEntitySet="Table_BangDiem">
+          <ScalarProperty Name="MaDiem" ColumnName="MaDiem" />
+          <ScalarProperty Name="Toan" ColumnName="Toan" />
+          <ScalarProperty Name="Ly" ColumnName="Ly" />
+          <ScalarProperty Name="Hoa" ColumnName="Hoa" />
+          <ScalarProperty Name="TiengAnh" ColumnName="TiengAnh" />
+          <ScalarProperty Name="Gdcd" ColumnName="Gdcd" />
+          <ScalarProperty Name="Van" ColumnName="Van" />
+          <ScalarProperty Name="Su" ColumnName="Su" />
+          <ScalarProperty Name="Dia" ColumnName="Dia" />
+          <ScalarProperty Name="CongNghe" ColumnName="CongNghe" />
+          <ScalarProperty Name="TinHoc" ColumnName="TinHoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table_HocSinh">
+      <EntityTypeMapping TypeName="QLHSModel.Table_HocSinh">
+        <MappingFragment StoreEntitySet="Table_HocSinh">
+          <ScalarProperty Name="MaHS" ColumnName="MaHS" />
+          <ScalarProperty Name="TenHocSinh" ColumnName="TenHocSinh" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="MaDiem" ColumnName="MaDiem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table_LopHoc">
+      <EntityTypeMapping TypeName="QLHSModel.Table_LopHoc">
+        <MappingFragment StoreEntitySet="Table_LopHoc">
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="TenLop" ColumnName="TenLop" />
+          <ScalarProperty Name="Khoi" ColumnName="Khoi" />
+          <ScalarProperty Name="GiaoVien" ColumnName="GiaoVien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

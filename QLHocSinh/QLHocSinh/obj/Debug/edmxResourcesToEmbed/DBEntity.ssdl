@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLHSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Table_BangDiem">
+    <Key>
+      <PropertyRef Name="MaDiem" />
+    </Key>
+    <Property Name="MaDiem" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Toan" Type="nchar" MaxLength="10" />
+    <Property Name="Ly" Type="nchar" MaxLength="10" />
+    <Property Name="Hoa" Type="nchar" MaxLength="10" />
+    <Property Name="TiengAnh" Type="nchar" MaxLength="10" />
+    <Property Name="Gdcd" Type="nchar" MaxLength="10" />
+    <Property Name="Van" Type="nchar" MaxLength="10" />
+    <Property Name="Su" Type="nchar" MaxLength="10" />
+    <Property Name="Dia" Type="nchar" MaxLength="10" />
+    <Property Name="CongNghe" Type="nchar" MaxLength="10" />
+    <Property Name="TinHoc" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Table_HocSinh">
+    <Key>
+      <PropertyRef Name="MaHS" />
+    </Key>
+    <Property Name="MaHS" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenHocSinh" Type="nvarchar" MaxLength="50" />
+    <Property Name="GioiTinh" Type="nchar" MaxLength="10" />
+    <Property Name="NgaySinh" Type="datetime" />
+    <Property Name="Sdt" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiaChi" Type="ntext" />
+    <Property Name="MaLop" Type="nchar" MaxLength="10" />
+    <Property Name="MaDiem" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Table_LopHoc">
+    <Key>
+      <PropertyRef Name="MaLop" />
+    </Key>
+    <Property Name="MaLop" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenLop" Type="nchar" MaxLength="10" />
+    <Property Name="Khoi" Type="nchar" MaxLength="10" />
+    <Property Name="GiaoVien" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Table_HocSinh_Table_BangDiem">
+    <End Role="Table_BangDiem" Type="Self.Table_BangDiem" Multiplicity="0..1" />
+    <End Role="Table_HocSinh" Type="Self.Table_HocSinh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_BangDiem">
+        <PropertyRef Name="MaDiem" />
+      </Principal>
+      <Dependent Role="Table_HocSinh">
+        <PropertyRef Name="MaDiem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_HocSinh_Table_LopHoc">
+    <End Role="Table_LopHoc" Type="Self.Table_LopHoc" Multiplicity="0..1" />
+    <End Role="Table_HocSinh" Type="Self.Table_HocSinh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_LopHoc">
+        <PropertyRef Name="MaLop" />
+      </Principal>
+      <Dependent Role="Table_HocSinh">
+        <PropertyRef Name="MaLop" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLHSModelStoreContainer">
+    <EntitySet Name="Table_BangDiem" EntityType="Self.Table_BangDiem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_HocSinh" EntityType="Self.Table_HocSinh" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_LopHoc" EntityType="Self.Table_LopHoc" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Table_HocSinh_Table_BangDiem" Association="Self.FK_Table_HocSinh_Table_BangDiem">
+      <End Role="Table_BangDiem" EntitySet="Table_BangDiem" />
+      <End Role="Table_HocSinh" EntitySet="Table_HocSinh" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_HocSinh_Table_LopHoc" Association="Self.FK_Table_HocSinh_Table_LopHoc">
+      <End Role="Table_LopHoc" EntitySet="Table_LopHoc" />
+      <End Role="Table_HocSinh" EntitySet="Table_HocSinh" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
